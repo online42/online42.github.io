@@ -1,0 +1,12 @@
+.external-link {
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-image: url(../images/external-link.png);
+	padding-right: 15px;
+}
+
+.info-line {
+	background-color: #efefef;
+	padding: 5px;
+	margin-bottom: 10px;
+}
