@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link rel="stylesheet" href="../css/wiki.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<title>Linux - Wiki</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Linux</h1>
+
+<p><strong>Linux</strong> - заполнить интро*****</p>
+
+<p>
+  Shell (оболочка, также известная как терминал, консоль или командная строка) — это текстовый интерфейс пользователя, через который команды отправляются машине. На Linux, по-умолчанию, язык оболочки называется bash.
+</p>
+
+<p>
+Псевдонимы директорий
+Текущая директория (где я?): .
+Родительская директория текущей директории: ..
+Домашняя директория пользователя: ~
+Корень файловой системы (или родитель всех родителей): /
+</p>
+
+<p>
+  Основные команды bash
+Это те команды, которые я использую чаще всего в Linux (начиная от самых часто используемых к самым редко используемым). Как я уже писал раньше, знание всего горстки команд поможет выполнять большой набор необходимых программируемых задач.
+
+cd {directory} изменить директорию
+ls -lha вывести директорию в виде списка (подробного)
+vim или nano редактор командной строки
+touch {file} создать новый пустой файл
+cp -R {original_name} {new_name} скопировать файл или директорию (и всё их содержимое)
+mv {original_name} {new_name} переместить или переименовать файл
+rm {file} удалить файл
+rm -rf {file/folder} удалить файл или папку без возможности восстановления [использовать аккуратно!]
+pwd вывести текущую рабочую директорию
+cat или less или tail или head -n10 {file} вывести в STDOUT содержимое файла
+mkdir {directory} создать пустую директорию
+grep -inr {string} найти строку в любом файле этой директории или дочерних директориях
+column -s, -t <delimited_file> отобразить разделенный запятыми файл в виде столбцов
+
+ssh {username}@{hostname} соединиться с удалённой машиной
+
+tree -LhaC 3 показать структуру директории на 3 уровнями вглубь (с размерами файлов и включая скрытые директории)
+
+htop (или top) диспетчер задач
+
+pip install --user {pip_package} пакетный менеджер Python для установки пакетов в ~/.local/bin
+
+pushd . ; popd ; dirs; cd - push/pop/view директорию в стек + изменить обратно на последнюю директорию
+
+sed -i "s/{find}/{replace}/g" {file} заменить строку в файле
+
+find . -type f -name '*.txt' -exec sed -i "s/{find}/{replace}/g" {} \; заменить строку для каждого файла в этой и дочерней папках с именем типа *.txt
+
+tmux new -s session, tmux attach -t session создать новую сессию терминала без создания нового окна [продвинутый уровень]
+
+wget {link} загрузить веб-страницу или веб-ресурс
+
+curl -X POST -d "{key: value}" http://www.google.com отправить HTTP-запрос на веб-сервер
+
+find <directory> вывести список всего содержимого директории и её дочерних директорий рекурсивно
+</p>
+
+
+
+    
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

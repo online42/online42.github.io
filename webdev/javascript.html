@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link rel="stylesheet" href="../css/wiki.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<title>JavaScript - Wiki</title>
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript</h1>
+    <div class="info-line">
+    	<a class="external-link" href="http://learn.javascript.ru" target="_blank">Учебник Javascript</a>
+    </div>
+
+    <!--<p><strong>JavaScript (JS)</strong> - заполнить интро про язык</p> -->
+    
+<h2>Способы подключения</h2>
+<code>
+  &lt;body><br>
+  &lt;script><br>
+    alert( 'Я - JavaScript!' );<br>
+  &lt;/script><br>
+&lt;/body><br>
+</code>
++<br>
+<code>
+&lt;script src="/js/script2.js">&lt;/script><br>
+</code>
+
+<h2>Атребуты</h2>
+<p><code>async</code> - скрипт выполняется асинхронно, при наличии <code>&lt;script async src="..."></code> браузер без остановки обрабатывает страницу, скрипт выполнится когда загрузится. Не поддерживается IE9-.</p>
+
+<p><code>defer</code> - скрипт выполняется асинхронно, но в определенном порядке. Поддерживается всеми браузерами.</p>
+
+<p>При одновременном указании async и defer в современных браузерах будет использован только async, в IE9- – только defer (не понимает async).
+Атрибуты async/defer работают только в том случае, если назначены на внешние скрипты, т.е. имеющие src.
+При попытке назначить их на обычные скрипты <code>&lt;script>…&lt;/script></code>, они будут проигнорированы.</p><!-- Переписать этот парараграф -->
+
+<h2>Комментарии</h2>
+<code>
+// Пример односторчного комментария<br>
+</code>
+<br>
+<code>
+/* Пример<br>
+многострочного<br>
+комментария<br>
+*/
+</code>
+
+<h2>Типы данных</h2>
+<ul>
+  <li><code>number</code> - число</li>
+  <li><code>string</code> - строка</li>
+  <li><code>boolean</code> - булевый (логический) тип</li>
+  <li><code>null</code> - специальное значение</li>
+  <li><code>undefined</code> - специальное значение</li>
+  <li><code>object</code> - объект</li>
+  <li><code>typeof</code> - оператор</li>
+</ul>
+
+    <h2>Операции</h2>
+    <p>Возведение в степень
+    	<code>3 ** 2; // 9</code>
+    </p>
+    
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

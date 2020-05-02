@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link rel="stylesheet" href="../../css/wiki.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<title>HTML - Wiki</title>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML</h1>
+    <div class="info-line">
+    	<a class="external-link" href="http://htmlbook.ru/html" target="_blank">Справочник htmlbook.ru</a>
+      <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">Справочник mozilla.org</a>
+    </div>
+    
+    <p><strong>HyperText Markup Language</strong> - язык разметки веб-страниц и приложений.</p>
+
+    <h2>
+      Типы тегов (парные / одиночные | строчные / блочные)
+    </h2>
+    
+    <p>одиночные - img, input, hr, br <br />
+      парные - всё, что осталось <br /><br />
+      
+      блочные - занимают всю ширину, которая есть (например: div, p, h1-h6 + html5 tags) <br />
+      строчные - по ширине контента (например: a, strong, em, u, span)</p>
+
+      inline (строчные);
+      block (блочные);
+      inline-block (строчно-блочные).
+
+      Строчные — <span>, <em>, <strong>
+        Блочные — <div>, <p>, <article>
+        Строчно-блочные — <input>, <textarea>
+
+
+
+    <img src="../../images/html.png">
+
+    <h2>Основные теги</h2>
+
+    <dl class="dl-horizontal">
+      <dt><code>&lt;a&gt;</code></dt>
+      <dd><code>&lt;a href="https://example.com" target="_blank">Пример ссылки&lt;/a&gt;</code> - это ссылка с атрибутом <code>&lt;href&gt;</code>, значением атрибута <code>https://example.com</code> и содержанием <code>Пример ссылки</code>. Ссылкой можно сделать изображение <code>&lt;a href="#"&gt;&lt;img src="#" alt="#"&gt;&lt;/a&gt;</code></dd>
+    </dl>    
+
+    <dl class="dl-horizontal">
+      <dt><code>&lt;img&gt;</code></dt>
+      <dd>Тег картинки <code>&lt;img src="https://example.com/logo.png" alt="Logo"&gt;</code> - это пример одиночного тега, в котором не используется закрывающий тег.</dd>
+    </dl> 
+
+    <dl class="dl-horizontal">
+      <dt><code>&lt;ol&gt;</code> <code>&lt;ul&gt;</code> <code>&lt;li&gt;</code></dt>
+      <dd>Списки - пример тегов, которые состят из нескольких вложенных элементов.<br>
+        <code>&lt;ol&gt;</code> (ordered list) пронумерованный список.<br>
+        <code>&lt;ul&gt;</code> (unordered list) непронумерованный список.<br>
+        <code>&lt;li&gt;</code> (list item) элемент списка.<br>
+        <br>
+        <code>
+          &lt;ol&gt;<br>
+          &lt;li&gt;Первый элемент&lt;/li&gt;<br>
+          &lt;li&gt;Второй элемент&lt;/li&gt;<br>
+          &lt;li&gt;Третий элемент&lt;/li&gt;<br>
+          &lt;ol&gt;
+        </code>    
+      </dd>
+    </dl>
+
+    <dl class="dl-horizontal">
+      <dt><code>&lt;table&gt;</code> <code>&lt;tr&gt;</code> <code>&lt;td&gt;</code></dt>
+      <dd>Границы и внешний вид таблиц настраивать через CSS. Использовать моноширинные шрифты.
+      	<code>
+			<!--
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
++ <td colspan="2"> + <td rowspan="2"> - растягивает на две строки или столбца
++ <tbody> + <thead> + <tfoot>
+	+
+Let's review what you've learned so far:
+
+The <table> element creates a table.
+The <tr> element adds rows to a table.
+To add data to a row, you can use the <td> element.
+Table headings clarify the meaning of data. Headings are added with the <th> element.
+Table data can span columns using the colspan attribute.
+Table data can span rows using the rowspan attribute.
+Tables can be split into three main sections: a head, a body, and a footer.
+A table's head is created with the <thead> element.
+A table's body is created with the <tbody> element.
+A table's footer is created with the <tfoot> element.
+All the CSS properties you learned about in this course can be applied to tables and their data.
+      -->
+      
+        </code>
+      </dd>
+    </dl> 
+
+
+<!--     Часть про формы подредактировать 
+    <h2>Форма</h2>
+
+    <h3>Обёртка</h3>
+    form - обёртка для формы
+    
+    <h3>Input (button | checkbox | file | hidden | image | password | radio | reset | submit | text)</h3>
+    <input type="text" />
+    
+    <h3>Textarea</h3>
+    <textarea></textarea>
+    
+    <h3>Select</h3>
+    <select>
+      <option>1</option>
+      <option>2</option>
+    </select>
+    
+    <h3>Button</h3>
+    <button>OK</button>
+    
+    <h2>Обёртки</h2>
+    
+    div - блочная <br />
+    span - строчная
+    
+    <h2>Стилизация текста</h2>
+    
+    em - курсив<br />
+    strong - жирность<br />
+    u - подчёркивание
+
+ -->
+
+
+<!-- Блок про аттрибуты
+
+ <h2>Аттрибуты</h2>
+
+ class - имя по которому будет обращение из CSS <br />
+ id - уникальный идентификатор (подключать плагин, уникальный на странице) <br />
+ style - стили прямо в разметке
+
+ -->
+
+
+
+    <h2>Структура</h2>
+    <p>Пример структуры HTML-страницы с использованием всех обязательных элементов. В <code>&lt;head&gt;</code> помещаются метаданные а в <code>&lt;body&gt;</code> контент.</p>
+    <code>
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      ... &lt;!-- Комменарий --&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      ...<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    </code>
+
+<h2>Обучение</h2>
+https://www.codecademy.com/learn/learn-html
+
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
