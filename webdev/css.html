@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -31,7 +31,7 @@
       <strong>Cascading Style Sheets</strong> - стили оформления HTML-документов. Отвечают за внешний вид страницы и
       правила отображения содержимого.
     </p>
-    <img src="../../images/content/css.png">
+    <img src="../images/content/css.png">
 
     <h2>Способы подключения</h2>
 
@@ -129,17 +129,20 @@
       <code>span</code> - основной строчный элемент.
     </p>
 
-    <h2>CSS Reset</h2>
+    <h2>CSS Reset / Normalize</h2>
 
     <p>
-      В браузерах по-умолчанию используются собственные стили элементов, поэтому вид сайтов может отличаться. Для
-      переназначения стилей существуют <a class="external-link" href="https://gist.github.com/freetonik/b432fa2ea224eca2f2458838049a8e7f" target="_blank">CSS-ресеты</a>:<br>
-      <code>
-        html, body {<br>
-        margin: 0;<br>
-        padding: 0;<br>
-        }
+      В браузерах по-умолчанию используются собственные стили элементов, поэтому вид сайтов может отличаться.<br>
+      Для переназначения стилей существуют <a href="https://gist.github.com/freetonik/b432fa2ea224eca2f2458838049a8e7f" target="_blank">CSS-ресеты</a>.
+  	</p>
+      <code>html, body {<br>
+	        margin: 0;<br>
+	        padding: 0;<br>
+	        }
       </code>
+    <p>
+      Нормализация используется для улучшения кроссбраузерности, она считается лучшей практикой, чем ресеты.<br>
+      <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>
     </p>
 
   </div>
