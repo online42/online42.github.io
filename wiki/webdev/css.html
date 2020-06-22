@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../css/style.css">
+
+	<title>CSS - Wiki</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<h1>CSS</h1>
+
+		<div class="info-line">
+			<a href="http://htmlbook.ru/css" target="_blank">Справочник htmlbook.ru</a>
+			<a href="css-position.html">Позиционирование в CSS</a>
+		</div>
+		<p>
+			<strong>Cascading Style Sheets</strong> - стили оформления HTML-документов. Отвечают за внешний вид страницы и
+			правила отображения содержимого.
+		</p>
+		<img src="../images/content/css.png">
+
+		<h2>Способы подключения</h2>
+
+		<dl class="dl-horizontal">
+			<dt>Непосредственно<br>в код страницы</dt>
+			<dd>
+				<code>&lt;style&gt;<br>
+					.important {<br>
+					color: green;<br>
+					font-style: italic;<br>
+				}<br>
+			&lt;/style&gt;</code>
+		</dd>
+	</dl>
+
+	<dl class="dl-horizontal">
+		<dt>В атрибутах<br>открывающего тега</dt>
+		<dd>
+			<code>&lt;p&gt;&lt;span style="color: green; font-style: italic"&gt;Пример&lt;/span&gt;кода.&lt;/p&gt;</code>
+		</dd>
+	</dl>
+
+	<dl class="dl-horizontal">
+		<dt>Подключением<br>отдельного файла</dt>
+		<dd>
+			В <code>&lt;head&gt;&lt;link rel="stylesheet" href="../../style.css"&gt;&lt;/head&gt;</code><br>
+		</dd>
+	</dl>
+
+	<h2>CSS-селекторы</h2>
+
+	<p>Стили применяются через указание селекторов.</p>
+	<p>
+		<code>*</code> – любые элементы<br>
+		<code>div</code> – элементы с таким тегом<br>
+		<code>#id</code> – элемент с данным id<br>
+		<code>.class</code> – элементы с таким классом<br>
+		<code>[name="value"]</code> – элементы с таким значением соответствующего атрибута<br>
+		<code>:visited</code> – псевдо-классы
+	</p>
+
+	<a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B" target="_blank">Справочник по селекторам, комбинаторам, псевдо</a>
+
+	<h3>Приоритет</h3>
+
+	<p>При "конфликтах" стили применяются сверху-вниз.<br>
+		У разных селекторов разный приоритет. В порядке возрастания:
+		<code>
+			<элемент>
+		</code>,
+		<code>.class</code>,
+		<code>#id</code>.
+	</p>
+	<p>
+		<code>&lt;p class="green"&gt;Это параграф зеленого цвета&lt;/p&gt;</code><br>
+		<code>
+			p.green {<br>
+			color: green;<br>
+		}<br>
+	</code>
+</p>
+<p>
+	Селектор <code>p.green</code> означает «все элементы типа <code>p</code> с классом <code>green</code>»<br>
+	Селектор <code>.green</code> означает «все элементы любого типа с классом <code>green</code>»<br>
+	Селектор <code>ul li</code> означает «элементы <code>li</code> внутри предка <code>ul</code>»<br>
+	Селектор <code>.green li</code> означает «элементы <code>li</code> внутри предка с классом<code>green</code>»
+</p>
+<p>
+	Для уникальных элементов вместо <code>class</code> используют <code>id</code>: <code>&lt;div
+	id="logo"&gt;&lt;/div&gt;</code> и вместо точки используют решетку:<br>
+	<code>
+		div#logo {<br>
+		padding: 50 px;<br>
+	}
+</code>
+</p>
+
+<a href="https://developer.mozilla.org/ru/docs/Web/CSS/Specificity" target="_blank">Специфичность</a>
+
+<h3>Отношения</h3>
+
+<p>
+	<code>div p</code> – элементы p, являющиеся потомками div <br>
+	<code>div > p</code> – только непосредственные потомки <br>
+	<code>div ~ p</code> – правые соседи: все p на том же уровне вложенности, которые идут после div <br>
+	<code>div + p</code> – первый правый сосед: p на том же уровне вложенности, который идёт сразу после div
+</p>
+
+<h2>Основные свойства</h2>
+
+<p>
+	<strong>display</strong> (<code>display: block</code> - элемент с новой строки во всю ширину; <code>display:
+	inline</code> - начинается в любом месте, занмает места на весь свой обьем).<br>
+	<code>div</code> - основной блочный элемент.<br>
+	<code>span</code> - основной строчный элемент.
+</p>
+
+<h2>CSS Reset / Normalize</h2>
+
+<p>В браузерах по-умолчанию используются собственные стили элементов, поэтому вид сайтов может отличаться.<br>
+	Для переназначения стилей существуют <a href="https://gist.github.com/freetonik/b432fa2ea224eca2f2458838049a8e7f" target="_blank">CSS-ресеты</a>.
+</p>
+<code>
+	html, body {<br>
+	margin: 0;<br>
+	padding: 0;<br>
+}
+</code>
+<p>Нормализация используется для улучшения кроссбраузерности, она считается лучшей практикой, чем ресеты.<br>
+	<a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>
+</p>
+
+</div>
+
+<footer class="container footer">	
+	<a href="#" class="topbutton title="Вернуться в начало станицы">&#8593; Наверх</a>
+</footer>
+
+</body>
+</html>

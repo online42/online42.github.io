@@ -1,12 +1,40 @@
-.external-link {
-	background-position: center right;
-	background-repeat: no-repeat;
-	background-image: url(../images/external-link.png);
-	padding-right: 15px;
+body {
+	font-family: 'Ubuntu', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #222;
 }
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Header and Top */
 
 .info-line {
 	background-color: #efefef;
 	padding: 5px;
 	margin-bottom: 10px;
+}
+
+/* Footer */
+
+.footer {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.topbutton {
+	background-color: #e2e2e2;
+	padding: 5px;
+}
+
+/* Декор */
+a[target="_blank"] {
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-image: url(../images/design/external-link.svg);
+	padding-right: 16px;
+	fill: red;
 }
