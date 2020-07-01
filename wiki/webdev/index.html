@@ -6,57 +6,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .webdev-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;      
+    }
 
-  <title>Web-dev - Wiki</title>
+    section {
+      padding: 20px;
+      margin: 5px;
+      flex: 1 1 auto;
+      background-color: lightgrey;      
+    }
+  </style>
+
+  <title>WebDev - Wiki</title>
 </head>
 
 <body>
   <div class="container">
+    <h1>Веб-разработка</h1>
+    <div class="webdev-wrap">
+      <section>
+        <h2>Редакторы кода</h2>
+        <a href="vs-code.html">Visual Studio Code</a><br>
+        <a href="https://www.sublimetext.com" target="_blank">Sublime Text</a>
+      </section>
 
-    <h2>Редакторы кода</h2>
-    <p><a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a><br>
-      <a href="https://www.sublimetext.com" target="_blank">Sublime Text</a></p>
+      <section>
+        <h2>Git</h2>
+        <p><a href="https://github.com" target="_blank">GitHub</a></p>
+      </section>
 
-    <h2>Git</h2>
-    <p><a href="https://github.com" target="_blank">GitHub</a></p>
+      <section>
+        <h2>Linux, command line</h2>
+        <a href="linux.html">Linux</a>        
+      </section>
 
-    <h2>Linux, command line</h2>
-    <p><a href="http://startubuntu.ru/?p=104328" target="_blank">Установка Ubuntu рядом с Windows</a></p>
+      <section>
+        <h2>HTML / CSS / JS</h2>
+        <p><a href="html.html">HTML</a></p>
+        <p><a href="css.html">CSS</a></p>
+        <p><a href="javascript.html">Javascript</a></p>
+        <p><a href="bem.html">BEM</a></p>
+      </section>
 
+      <section>
+        <h2>Языки программирования</h2>
+        <p><a href="javascript.html">Javascript</a></p>
+        <p>PHP</p>
+        <p>Ruby</p>
+      </section>
 
-    <h2>HTML / CSS / JS</h2>
-    <p><a href="wiki/webdev/html.html">HTML</a></p>
-    <p><a href="css.html">CSS</a></p>
-    <p><a href="/webdev/javascript.html">Javascript</a></p>
-    <p><a href="https://caniuse.com" target="_blank">https://caniuse.com</a> - показывает поддержку разметки разными
-      браузерами.</p>
-    <p><a href="http://ogp.me" target="_blank">OpenGraph</a> - разметка для Facebook, Вконтакте, Twitter, LinkedIn.</p>
+      <section>
+        <h2>Базы данных</h2>
+        <p>MySQL</p>
+      </section>
 
+      <section>
+        <h2>Фреймворки</h2>
+        <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+        <p>jQuery</p>
+      </section>
 
+      <section>
+        <h2>CMS</h2>
+        <p>WordPress</p>
+        <p>Joomla</p>
+        <p>Opencart</p>
+      </section>
 
-    <h2>Языки программирования</h2>
-    <p><a href="/webdev/javascript.html">Javascript</a></p>
-    <p>PHP</p>
-    <p>Ruby</p>
+      <section>
+        <h2>Макеты</h2>
+        <a href="https://www.figma.com" target="_blank">Figma</a>
+      </section>
 
-    <h2>Базы данных</h2>
-    <p>MySQL</p>
-
-    <h2>Фреймворки</h2>
-    <p><a href="http://getbootstrap.com" target="_blank">Bootstrap</a></p>
-    <p>jQuery</p>
-
-    <h2>CMS</h2>
-    <p>WordPress</p>
-    <p>Joomla</p>
-    <p>Opencart</p>
-
-    <h2>Всякое</h2>
-    <p><a href="/webdev/devtools.html">Developer Tools</a></p>
-    <p>FTP</p>
-    <p>Хостинг</p>
-  </div><!-- /container -->
-  <footer class="footer"></footer>
+      <section>
+        <h2>Всякое</h2>
+        <p><a href="devtools.html">Developer Tools</a></p>
+        <p>FTP</p>
+        <p>Хостинг</p>
+        <p><a href="https://caniuse.com" target="_blank">https://caniuse.com</a> - показывает поддержку разметки разными
+          браузерами.</p>
+        <p><a href="http://ogp.me" target="_blank">OpenGraph</a> - разметка для Facebook, Вконтакте, Twitter,
+          LinkedIn...
+        </p>
+      </section>
+    </div>    
+    <footer class="footer"></footer>
+  </div><!-- /container -->  
+  <script src="../../js/script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="../../css/style.css">
+
+	<title>BEM - Wiki</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<h1>БЭМ</h1>
+
+		<div class="info-line">
+			<a href="https://ru.bem.info/" target="_blank">Официальный сайт bem.info</a>
+		</div>
+
+		<h2>Блок</h2>
+		<p>Блок — это независимый компонент страницы, который можно использовать повторно.</p>
+		<ul>
+			<li>название описывает «что это?»: <code>.menu</code>, <code>.button</code></li>
+			<li>не влияет на свое окружение, не имеет внешней геометрии (отступов, границ) и позиционирования</li>		
+		</ul>
+
+		<h2>Элемент</h2>
+		<p>Составная часть блока, которая не может использоваться в отрыве от него.</p>
+		<ul>
+			<li>название характеризует смысл «что это?: <code>.menu__item</code>, <code>.hero__text</code></li>
+			<li>можно вкладывать друг в друга</li>
+			<li>всегда пренадлежит блоку и не используется самостоятельно</li>
+		</ul>
+
+		<h2>Модификатор</h2>
+		<p>Cущность, определяющая внешний вид, состояние или поведение блока либо элемента.</p>
+		<ul>
+			<li>название характеризует внешний вид «какой размер?»:	<code>search-form__button_size_m</code>, «тема»: <code>theme_islands</code>, состояние: <code>button_disabled</code></li>
+			<li>нельзя использовать самостоятельно</li>
+		</ul>
+		
+		<hr>
+		<p>В CSS по БЭМ также не рекомендуется использовать селекторы по тегам или id.</p>
+
+
+		<footer class="footer"></footer>
+
+	</div><!-- /container -->
+	<script src="../../js/script.js"></script>
+</body>
+
+</html>

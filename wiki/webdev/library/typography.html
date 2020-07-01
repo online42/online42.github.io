@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../../css/style.css">
 	<title>Типографика</title>
 </head>
+
 <body>
 	<div class="container">
-		<h1>Типографика</h1>
+		<h1>Типографика в вебе</h1>
 		<h2>Шрифты</h2>
-		<p>
-			https://design.ubuntu.com/font/<br>
-			https://www.ibm.com/plex/
-		</p>
+		<ul>
+			<li><a href="https://fonts.google.com/" target="_blank">Google Fonts Library</a></li>
+			<li><a href="https://design.ubuntu.com/font/" target="_blank">Ubuntu</a></li>
+			<li><a href="https://www.ibm.com/plex/" target="_blank">IBM Plex</a></li>
+		</ul>	
+		
+		<h3>Веб-безопасные шрифты</h3>
+		<p>Стандартные шрифты, которые предустановленны в большинстве операционных ситем:</p>
+		<p><b>Sans-serif</b>: Arial, Verdana</p>
+		<p><b>Serif</b>: Times New Roman, Georgia</p>
+		<a href="https://www.cssfontstack.com/" target="_blank">A complete collection of web safe CSS font stacks</a>
+
+		<h3>Нестандартные шрифты</h3>
+		<p>TTF и OTF — форматы с минимальным сжатием или без него.</p>
+		<p>WOFF и WOFF2 — форматы c высокой степенью сжатия.</p>
+		<p>WOFF2 — лучший выбор, для подстраховки используется совместно с WOFF, для поддержки устаревших браузеров	требуются TTF и OTF.</p>
+
+		<h4>Подключение через @font-face</h4>
+
+		<code>
+			@font-face {<br>
+			font-family: 'Ubuntu';<br>
+			font-style: normal;<br>
+			font-weight: 400;<br>
+			font-display: swap;<br>
+			src:<br>
+			url('../fonts/Ubuntu.woff2') format('woff2'),<br>
+			url('../fonts/Ubuntu.woff') format('woff');<br>
+			}
+		</code>
+		<ul>
+			<li>первым в <code>src:url</code> должен быть самый подходящий формат, а далее — запасные варианты</li>
+			<li>для каждого начертания нужно отдельное правило @font-face</li>
+			<li>для улучшения производительности правило @font-face лучше всего прописывать в самом начале CSS-файла</li>
+			<li>с помощью функции <code>local</code> можно загружать шрифт с компьютера пользователя, если он установлен, но
+				отображаение может быть некорректным</li>
+		</ul>
+
 		<footer class="footer"></footer>
-	</div><!-- /container -->	
+	</div><!-- /container -->
+	<script src="../../../js/script.js"></script>
 </body>
+
 </html>

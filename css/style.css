@@ -1,21 +1,40 @@
 @font-face {
 	font-family: 'Ubuntu';
-	src: url('../fonts/Ubuntu.woff') format('woff'),
-		 url('../fonts/Ubuntu.woff2') format('woff2');
-	font-weight: normal;
 	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src:
+		url('../fonts/Ubuntu-Light.woff2') format('woff2'),
+		url('../fonts/Ubuntu-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src:
+		url('../fonts/Ubuntu-Bold.woff2') format('woff2'),
+		url('../fonts/Ubuntu-Bold.woff') format('woff');
 }
 
 body {
+	margin: 0;
 	font-family: 'Ubuntu', Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
+	line-height: 1.4;
 	color: #222;
+}
+
+code {
+	color: blueviolet;
 }
 
 .container {
 	max-width: 900px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 /* Header and Top */
@@ -29,16 +48,18 @@ body {
 /* Footer */
 
 .footer {
-	margin-top: 50px;
-	margin-bottom: 20px;
+	padding: 40px 0;
 }
 
-.topbutton {
-	background-color: #e2e2e2;
+.topbutton {	
 	padding: 5px;
+	color: inherit;
+	background-color: #e2e2e2;
+	text-decoration: none;	
 }
 
-/* Декор */
+/* Decoration */
+
 a[target="_blank"] {
 	background-position: center right;
 	background-repeat: no-repeat;
