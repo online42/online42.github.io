@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", Arial, sans-serif;
+  font-size: calc(0.5rem + 1vw);
+}
+
+h1 {
+  color: hsl(179, 62%, 43%);
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+/* Join our community */
+
+.join {
+  padding: 2rem;
+  flex-basis: 60%;
+  min-height: 35vh;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(218, 22%, 67%);
+  border-radius: 8px 8px 0 0;  
+}
+
+.join h2 {
+  font-size: 1.2rem;
+  color: hsl(71, 73%, 54%);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.join p {
+  line-height: 1.5;  
+}
+
+.line-break {
+  width: 100%;
+}
+
+/* Monthly Subscription */
+
+.subscription {
+  padding: 2rem;
+  flex-basis: 30%;
+  min-height: 45vh;
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(0, 0%, 100%); 
+  border-radius: 0 0 0 8px;
+}
+
+.price {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;   
+}
+
+.per-month{
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(204, 43%, 93%);
+  vertical-align: 0.5rem;
+  margin-left: 1rem;
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  
+  background-color: hsl(71, 73%, 54%);
+  color: hsl(0, 0%, 100%);
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: hsl(71, 83%, 44%);
+  transition: 0.3s;
+}
+
+/* Why Us */
+
+.why {
+  padding: 2rem;
+  flex-basis: 30%;
+  min-height: 45vh;
+  
+  background-color: hsl(179, 62%, 47%);  
+  border-radius: 0 0 8px 0;
+}
+
+ul {
+  margin-top: 1rem;
+  line-height: 1.5;
+  list-style-type: none;
+  color: hsl(204, 43%, 93%);
+}
+
+/* Extra large devices (large desktops, 1500px) */
+@media (max-width: 1500px) {
+  
+  
+  .join {
+    flex-basis: 70%;
+    min-height: 35vh;
+  }
+
+  .subscription, .why {
+    flex-basis: 35%;
+    min-height: 45vh;
+  }
+   
+ }
+
+/* Large devices (desktops, 992px) */
+@media (max-width: 992px) {
+
+  .join {
+    flex-basis: 90%;
+    min-height: 40vh;
+  }
+
+  .subscription, .why {
+    flex-basis: 45%;
+    min-height: 50vh;
+  }
+
+ }
+
+/* Medium devices (tablets, 768px) */
+@media (max-width: 768px) and (min-width: 575px){ 
+
+  html {
+    font-size: calc(1rem + 1vw);
+  }
+
+  .container {
+    align-content: stretch;
+  }
+
+  .join {
+    min-width: 100%;
+    border-radius: unset;
+    align-items: stretch;
+    font-size: calc(1.1rem + 1vw);
+  }
+
+  .line-break {
+    display: none;
+  }
+  
+  .subscription, .why {
+    min-width: 50%;
+    border-radius: unset;
+    padding: 1.5rem;
+  }
+
+  .subscription p:last-of-type {
+    font-size: calc(0.5rem + 1vw);
+  }
+
+ }
+
+/* Small devices (landscape phones, 576px) */
+
+@media (max-width: 576px) {
+
+  html {
+    font-size: calc(1rem + 1vw);
+  }
+
+ .join, .why, .subscription {
+  flex-basis: auto; 
+  min-height: auto;
+  width: 100%;
+  border-radius: unset;
+}
+
+.subscription {  
+  order: 1;
+}
+
+}
