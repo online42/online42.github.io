@@ -63,7 +63,7 @@ img {
 .description__text::before {
     position: absolute;
     left: 0;
-    content: url(/images/design/6dots.svg);
+    content: url(../images/design/6dots.svg);
 }
 
 /* information */
@@ -103,7 +103,7 @@ img {
 .yields::before {
     position: absolute;
     left: -40px;
-    content: url(/images/design/yields.svg);
+    content: url(../images/design/yields.svg);
 }
 
 .prep-time::before,
@@ -111,7 +111,7 @@ img {
 .total-time::before {
     position: absolute;
     left: -40px;
-    content: url(/images/design/time.svg);
+    content: url(../images/design/time.svg);
 }
 
 .info__item-title {
