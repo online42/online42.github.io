@@ -70,6 +70,7 @@ img {
 
 .information {
     position: relative;
+    overflow-x: hidden;
 }
 
 .info {
