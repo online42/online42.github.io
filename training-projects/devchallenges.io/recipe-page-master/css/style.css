@@ -1,10 +1,9 @@
-/* Сделать версию для принтеров @media print { } */
-
-*, 
-*:before, 
+*,
+*:before,
 *:after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-  }
+}
 
 body {
     max-width: 1010px;
@@ -28,7 +27,7 @@ img {
     position: absolute;
     opacity: 0;
     pointer-events: none;
-  }
+}
 
 .wrapper {
     max-width: 630px;
@@ -77,8 +76,14 @@ img {
     position: absolute;
     right: 0;
 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 
     width: 216px;
@@ -87,6 +92,7 @@ img {
     padding-left: 80px;
 
     border-radius: 12px;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -104,7 +110,7 @@ img {
 .cook-time::before,
 .total-time::before {
     position: absolute;
-    left: -40px;    
+    left: -40px;
     content: url(/images/design/time.svg);
 }
 
@@ -153,13 +159,13 @@ img {
 
 .unordered-list {
     padding-left: 0;
-    list-style: none;    
+    list-style: none;
 }
 
 .unordered-list__item {
     position: relative;
     padding-left: 30px;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
 }
 
 .unordered-list__checkbox {
@@ -174,28 +180,28 @@ img {
 /* instructions */
 
 .ordered-list {
-    padding-left: 0;    
-    list-style: none;    
+    padding-left: 0;
+    list-style: none;
 }
 
 .ordered-list__item {
-    position: relative;    
+    position: relative;
     margin-bottom: 30px;
-    padding-left: 50px;    
+    padding-left: 50px;
     counter-increment: ol-counter;
 }
 
 .ordered-list__item:last-child {
     margin-bottom: 0;
-  }
+}
 
 .ordered-list__item::before {
     position: absolute;
     content: counter(ol-counter);
     left: 0;
     width: 36px;
-    height: 36px;    
-    
+    height: 36px;
+
     font-family: 'Playfair Display', Georgia, serif;
     font-style: normal;
     font-weight: bold;
@@ -203,7 +209,7 @@ img {
     line-height: 30px;
 
     text-align: center;
-    color: #FFFFFF;    
+    color: #FFFFFF;
     background-color: #F2994A;
     border-radius: 6px;
 }
@@ -241,11 +247,15 @@ img {
 
     .info {
         position: relative;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
         width: 100%;
         height: auto;
         padding-left: 20px;
-        box-shadow: unset;        
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
     }
 }
 
@@ -267,7 +277,8 @@ img {
     .info {
         width: 116%;
         padding-left: 40px;
-        flex-wrap: wrap;       
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     }
 
     .info__item {
@@ -275,13 +286,15 @@ img {
     }
 
     .yields {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
 
     .prep-time,
     .cook-time,
     .total-time {
-    flex-basis: 33.333%;
+        -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
     }
 
     /* ingredients */
@@ -291,7 +304,7 @@ img {
     }
 }
 
-    @media (max-width: 375px) {
+@media (max-width: 375px) {
 
     body {
         font-size: 14px;
@@ -323,7 +336,7 @@ img {
 
     /* ingredients */
 
-    .ingredients__title, 
+    .ingredients__title,
     .instructions__title {
         font-size: 18px;
         line-height: 24px;
