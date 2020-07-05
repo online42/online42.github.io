@@ -70,7 +70,6 @@ img {
 
 .information {
     position: relative;
-    overflow-x: hidden;
 }
 
 .info {
@@ -275,13 +274,17 @@ img {
 
     /* information */
 
+    .information {
+        overflow-x: hidden;
+    }
+
     .info {
         width: 116%;
         padding-left: 40px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
-
+    
     .info__item {
         margin-bottom: 30px;
     }
@@ -311,7 +314,7 @@ img {
         font-size: 14px;
     }
 
-    /* description */
+    /* description */    
 
     .description__title {
         font-size: 24px;

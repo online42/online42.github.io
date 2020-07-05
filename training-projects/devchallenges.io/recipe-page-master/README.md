@@ -9,3 +9,5 @@ Fulfill user stories below:
 * User story: I can see number of servings, baking times
 
 Source: https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht
+
+Demo: https://online42.github.io/training-projects/devchallenges.io/recipe-page-master/
