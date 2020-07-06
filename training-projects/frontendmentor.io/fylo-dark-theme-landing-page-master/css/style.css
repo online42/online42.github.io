@@ -88,7 +88,7 @@ ul.menu {
 
 .intro {
     background-color: hsl(217, 28%, 15%);
-    background-image: url(/images/bg-curvy-desktop.svg);
+    background-image: url(../images/bg-curvy-desktop.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom center;
@@ -204,7 +204,7 @@ img.features__item-image {
 }
 
 .stay-productive__btn::after {
-    content: url(/images/icon-arrow.svg);
+    content: url(../images/icon-arrow.svg);
     /* выровнять иконку */
 }
 
@@ -241,7 +241,7 @@ img.features__item-image {
     height: 45px;
     top: -35px;
     left: -10px;
-    background-image: url(/images/bg-quotes.png);
+    background-image: url(../images/bg-quotes.png);
     z-index: -1;   
 }
 
@@ -369,7 +369,7 @@ img.features__item-image {
     height: 20px;
     top: 10px;
     left: 0px;
-    background-image: url(/images/icon-location.svg);
+    background-image: url(../images/icon-location.svg);
     background-repeat: no-repeat;
 }
 
@@ -393,7 +393,7 @@ img.features__item-image {
     height: 20px;
     top: 0px;
     left: 0px;
-    background-image: url(/images/icon-phone.svg);
+    background-image: url(../images/icon-phone.svg);
     background-repeat: no-repeat;        
 }
 
@@ -405,7 +405,7 @@ img.features__item-image {
     height: 20px;
     top: 5px;
     left: 0px;
-    background-image: url(/images/icon-email.svg);
+    background-image: url(../images/icon-email.svg);
     background-repeat: no-repeat;
 }
 
