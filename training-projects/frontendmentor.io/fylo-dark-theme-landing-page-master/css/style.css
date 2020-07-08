@@ -1,14 +1,15 @@
-* {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
 body {
-    background-color: hsl(218, 28%, 13%);
-
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.5;
     color: hsl(0, 0%, 100%);
+    background-color: hsl(218, 28%, 13%);
 }
 
 .intro__image img,
@@ -25,15 +26,14 @@ body {
 
 .intro__title,
 .features__item-title,
-.stay-productive__title,
+.stay-productive__info-title,
 .order-form__title,
 .button {
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 700;
-    line-height: 1.3;
 }
 
-ul.menu {
+.menu {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -107,33 +107,31 @@ ul.menu {
 
 .intro__title {
     max-width: 680px;
-    margin: 34px auto 0;
+    margin: 0 auto;    
+    padding: 30px 0 12px;
     font-size: 40px;
 }
 
 .intro__text {
     max-width: 585px;
-    margin: 35px auto;
+    margin: 0 auto 33px;
     font-size: 20px;
 }
 
 .intro__button {
     width: 280px;
-    padding: 18px;
+    padding: 16px;
     font-size: 16px;
 }
 
 /* FEATURES */
-
-.features {
-    margin-bottom: 35px;
-}
 
 .features__wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0 110px;
+    margin-bottom: 58px;
 }
 
 .features__item {
@@ -141,30 +139,24 @@ ul.menu {
     height: 250px;
     text-align: center;
     padding: 0 30px;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
 }
 
 .features__item-image {
+    display: flex;
+    align-items: center;
     width: 100px;
     height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-img.features__item-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .features__item-title {
     font-size: 20px;
-    margin-top: 10px;
+    padding-top: 16px;
 }
 
 .features__item-text {
     margin-top: 5px;
-    line-height: 1.5;
 }
 
 /* STAY PRODUCTIVE */
@@ -183,24 +175,30 @@ img.features__item-image {
     margin-left: 15px;
 }
 
-.stay-productive__text {
+.stay-productive__info {
     padding-top: 80px;
     padding-left: 30px;
     width: 600px;
     font-size: 16px;
 }
 
-.stay-productive__title {    
+.stay-productive__info-title {    
     max-width: 495px;
     margin-bottom: 0;
     font-size: 40px;
+    line-height: 1.25;
+}
+
+.stay-productive__info-text {
+    padding-top: 5px;
+    margin-bottom: 24px;
 }
 
 .stay-productive__btn {
     display: inline-block;
     border-bottom: 1px solid hsl(176, 68%, 64%);
     cursor: pointer;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 }
 
 .stay-productive__btn::after {
@@ -219,7 +217,7 @@ img.features__item-image {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 345px;
+    margin-bottom: 70px;
     padding: 0 30px;
 }
 
@@ -228,7 +226,7 @@ img.features__item-image {
     width: 360px;
     min-height: 200px;
     margin: 15px;
-    padding: 35px 30px 15px;
+    padding: 38px 28px 15px;
     background-color: hsl(219, 30%, 18%);
     box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.15);
 }
@@ -239,14 +237,15 @@ img.features__item-image {
     display: inline-block;
     width: 55px;
     height: 45px;
-    top: -35px;
-    left: -10px;
+    top: -38px;
+    left: -5px;
     background-image: url(../images/bg-quotes.png);
     z-index: -1;   
 }
 
 .testimonials__item-text {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
+    word-spacing: 80%;
 }
 
 .testimonials__item-author-photo {
@@ -277,23 +276,26 @@ img.features__item-image {
 /* ORDER FORM */
 
 .order-form {
-    position: absolute;
-    top: -160px;
-    left: 50%;
-    margin-left: -433px;
-    padding: 50px 80px;
-    width: 866px;
-    height: 275px;
+    position: relative;
+    top: 110px;  
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 866px;
+    height: 275px; 
+    padding: 47px 80px; 
+    margin: 0 auto;    
+    
     text-align: center;
     background-color: hsl(217, 28%, 15%);
     border-radius: 5px;
-    box-shadow: 5px 5px 6px hsl(216, 53%, 7%);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 5px 5px 6px hsl(216, 53%, 7%);    
 }
 
 .order-form__title {
     font-size: 30px;
+    letter-spacing: 1px;
 }
 
 .form {
@@ -320,9 +322,8 @@ img.features__item-image {
 }
 
 .order-form__text {
-    margin: 5px 40px 20px;
+    margin: 5px 40px 22px;
 }
-
 
 /* FOOTER */
 
@@ -336,9 +337,7 @@ img.features__item-image {
 }
 
 .footer {
-    position: relative;
-    height: 500px;
-    padding-top: 200px;
+    font-size: 16px;
     background-color: hsl(216, 53%, 9%);
 }
 
@@ -346,19 +345,22 @@ img.features__item-image {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 500px;
+    padding-top: 140px;
     padding-left: 40px;
 }
 
 .footer__logo {
     flex-basis: 100%;
-    margin-bottom: 25px;
+    align-self: flex-end;
 }
 
 .contacts-adress {
     position: relative;
-    width: 370px;
+    flex: 1 0 25%;
+    padding: 26px;
     padding-left: 40px;
-    font-size: 16px;
+    min-width: 300px;
 }
 
 .contacts-adress::before {
@@ -367,22 +369,28 @@ img.features__item-image {
     display: inline-block;
     width: 20px;
     height: 20px;
-    top: 10px;
+    top: 32px;
     left: 0px;
     background-image: url(../images/icon-location.svg);
     background-repeat: no-repeat;
 }
 
-.contacts-wrap {
-    display: flex;
-    flex-direction: column;
+.menu-contacts {
+    flex: 1 0 auto;
+    padding: 26px;
+}
+
+.menu-company, .menu-info {
+    flex: 1 0 0;
+    padding: 26px;
+    min-width: 200px;
 }
 
 .contacts-phone,
 .contacts-email {
     position: relative;
     padding-left: 45px;
-    font-size: 14px;
+    font-size: 14px;    
 }
 
 .contacts-phone::before {
@@ -394,7 +402,7 @@ img.features__item-image {
     top: 0px;
     left: 0px;
     background-image: url(../images/icon-phone.svg);
-    background-repeat: no-repeat;        
+    background-repeat: no-repeat;
 }
 
 .contacts-email::before {
@@ -419,6 +427,9 @@ img.features__item-image {
 
 .social-buttons {
     display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding-top: 26px;
 }
 
 .social-buttons svg {
