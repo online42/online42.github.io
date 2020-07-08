@@ -1,28 +1,64 @@
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
+
+    /* ORDER FORM */
+
+    .order-form {
+    height: auto;
+    }
     
+    /* FOOTER */
+
+    .footer__wrap {
+        height: auto;
+    }
+
+    .menu-company,
+    .menu-info {
+        flex: 1 0 50%;
+    }
+
+    .social-buttons {
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+
     /* HEADER */
 
     .header__top {
         height: 100px;
     }
-    
-/* .testimonials__item {
-    flex-grow: 1;
-    width: 360px;
-    min-height: 200px;
-    margin: 15px;
-    padding: 45px 25px 30px;
-    background-color: hsl(219, 30%, 18%);
-}
 
+    /* ORDER FORM */
 
     .order-form {
-        margin-left: -45%;
-        width: 90%;
-    } */
+        padding: 30px;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .input {
+        width: 80%;
+        margin: 0 auto 30px;
+    }
+
+    .order-form__button {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    .menu-contacts {
+        flex: 1 0 100%;
+    }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 540px) {
 
     /* HEADER */
 
@@ -66,55 +102,51 @@
 
     /* TESTIMONIALS */
 
-    .testimonials {
-        margin-bottom: 280px;
+    .testimonials__wrap {
+        padding: 0;
+        margin-bottom: 0;
     }
 
     .testimonials__item {
+        min-height: auto;
         padding: 32px 24px 24px;
     }
 
     .testimonials__item-text {
-        margin-bottom: 22px;
         font-size: 12px;
     }
 
    /* ORDER FORM */
 
    .order-form {
-       padding: 20px;
-       height: 355px;
-       align-content: space-between;
+        padding: 20px;
    }
 
    .order-form__title {
-       font-size: 20px;
+        font-size: 20px;
    }
 
    .order-form__text {
-       margin: 0;
-   }
+        margin: 0 0 20px;
+    }
 
-   .order-form__button {
-       width: 100%;
-       margin-left: 0;
-       margin-top: 15px;
-   }
+    .input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-   .form {
-       flex-direction: column;
-   }
+    .order-form__button {
+        width: 100%;
+    }
 
-   /* FOOTER */
+    /* FOOTER */
 
-
-
-
-
+    .footer__wrap {
+        padding-top: 180px;
+        padding-left: 0;
+    }
     
-
-
-
-
-
+    .social-buttons {
+        flex-basis: 100%;
+    }
 }

@@ -203,7 +203,6 @@ body {
 
 .stay-productive__btn::after {
     content: url(../images/icon-arrow.svg);
-    /* выровнять иконку */
 }
 
 .stay-productive__btn a {
@@ -380,7 +379,8 @@ body {
     padding: 26px;
 }
 
-.menu-company, .menu-info {
+.menu-company,
+.menu-info {
     flex: 1 0 0;
     padding: 26px;
     min-width: 200px;
