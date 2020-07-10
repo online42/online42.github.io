@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="../../../css/style.css">
+
+	<title>Установка CMS WordPress</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<h1>Установка и настройка WP</h1>
+
+		<h2>Установка WP на localhost</h2>
+
+		<ol>
+			<li>Скачать, установить и запустить <a href="https://www.apachefriends.org/ru/index.html" target="_blank">XAMPP</a></li>
+			<li>Создать базу данных в http://localhost/phpmyadmin/</li>
+			<li>Скачать <a href="https://ru.wordpress.org/download/" target="_blank">WordPress</a> и распаковать архив в C:\xampp\htdocs\имя-сайта</li>			
+			<li>В файле wp-config-sample.php изменить 3 строки:<br>
+				define( 'DB_NAME', 'имя-базы-данных' );<br>
+				define( 'DB_USER', 'root' );<br>
+				define( 'DB_PASSWORD', '' );
+			</li>
+			<li>Переименовать wp-config-sample.php в wp-config.php</li>
+			<li>Открыть в браузере http://localhost/имя-сайта/ и заполнить форму</li>			
+		</ol>
+
+		<h2>Перенос WP с localhost на хостинг</h2>
+
+		<ol>
+			<li>Залить все файлы в корень хостинга</li>
+			<li>Импортировать базу данных из XAMPP на хостинг</li>
+			<li>Сделать необходимые правки в файле wp-config.php</li>
+		</ol>
+
+
+		<footer class="footer"></footer>
+
+	</div><!-- /container -->
+	<script src="../../../js/script.js"></script>
+</body>
+
+</html>
