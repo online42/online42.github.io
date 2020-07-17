@@ -7,14 +7,25 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    section {
+
+    .project {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-      margin-bottom: 50px;
+      margin-bottom: 20px;   
+      padding: 10px;
+      background-color: #e6e6e6;
     }
-    img {
-    box-shadow: 0px 0px 5px 0px #ccc;
+
+    .project__image {
+      box-shadow: 0px 0px 5px 0px #ccc;
+      max-width: 100%;
     }
+
+    .project__info {
+      margin-bottom: 20px;
+    }
+
   </style>
 
   <title>Портфолио</title>
@@ -26,14 +37,24 @@
     <h1>Портфолио</h1>
 
     <section class="project">
+      <img class="project__image" src="../training-projects/devchallenges.io/recipe-page-master/src/screenshots/recipe-page-min.png" alt="">
       <div class="project__info">
         <h2>Training project "Recipe page"</h2>
         <a
           href="https://github.com/online42/online42.github.io/tree/master/training-projects/devchallenges.io/recipe-page-master">github</a>
         *
         <a href="https://online42.github.io/training-projects/devchallenges.io/recipe-page-master/">demo</a>
+      </div>      
+    </section>
+
+    <section class="project">
+      <div class="project__info">
+        <h2>Training project "Clipboard landing page"</h2>
+        <a href="https://github.com/online42/online42.github.io/tree/master/training-projects/frontendmentor.io/clipboard-landing-page-master">github</a>
+        *
+        <a href="https://online42.github.io/training-projects/frontendmentor.io/clipboard-landing-page-master/">demo</a>
       </div>
-      <img src="../training-projects/devchallenges.io/recipe-page-master/src/screenshots/recipe-page-min.png" alt="">
+      <img class="project__image" src="../training-projects/frontendmentor.io/clipboard-landing-page-master/src/screenshots/clipboard-landing-page-min.png" alt="">
     </section>
 
     <section class="project">
@@ -45,9 +66,7 @@
         <a
           href="https://online42.github.io/training-projects/frontendmentor.io/huddle-landing-page-with-single-introductory-section-master/">demo</a>
       </div>
-      <img
-        src="../training-projects/frontendmentor.io/huddle-landing-page-with-single-introductory-section-master/src/screenshots/huddle-min.png"
-        alt="">
+      <img class="project__image" src="../training-projects/frontendmentor.io/huddle-landing-page-with-single-introductory-section-master/src/screenshots/huddle-min.png" alt="">
     </section>
 
     <section class="project">
@@ -58,7 +77,7 @@
         <hr>
         <a href="http://freeesh.ga" target="_blank">Elementor WordPress</a>
       </div>
-      <img src="../training-projects/free/fresh/src/screenshots/fresh-min.png" alt="">
+      <img class="project__image" src="../training-projects/free/fresh/src/screenshots/fresh-min.png" alt="">
     </section>
 
     <footer class="footer"></footer>
