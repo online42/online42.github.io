@@ -19,7 +19,7 @@ li {
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s;
+    transition: filter 0.3s;
 }
 
 .container {
@@ -260,8 +260,8 @@ a {
     background-color:#f5f6f8;
 }
 
-.footer a:hover {
-    color: #26bca4;
+.footer a:hover {    
+    filter: invert(62%) sepia(56%) saturate(535%) hue-rotate(121deg) brightness(90%) contrast(89%); /* color: #26bca4; */
 }
 
 .footer-wrap {
