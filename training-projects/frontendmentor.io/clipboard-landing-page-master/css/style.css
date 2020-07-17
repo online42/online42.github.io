@@ -1,7 +1,8 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,15 +13,20 @@ body {
 }
 
 ul,
-li {        
+li {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    -webkit-transition: -webkit-filter 0.3s;
+    transition: -webkit-filter 0.3s;
+    -o-transition: filter 0.3s;
     transition: filter 0.3s;
+    transition: filter 0.3s, -webkit-filter 0.3s;
 }
 
 .container {
@@ -34,7 +40,7 @@ a {
 .section-title {
     margin-bottom: 22px;
     font-size: 35px;
-    font-weight: 600;    
+    font-weight: 600;
     text-align: center;
 }
 
@@ -44,22 +50,27 @@ a {
     line-height: 1.7;
     word-spacing: 1px;
     color: #9fabb2;
-    text-align: center;    
+    text-align: center;
 }
 
 /* buttons */
 
-.buttons-wrapper {    
+.buttons-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     max-width: 470px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding-top: 47px;
 }
 
-.button {     
+.button {
     width: 227px;
     height: 56px;
 
@@ -75,17 +86,23 @@ a {
 
 .ios {
     background-color: #26baa4;
-    box-shadow: 0px 15px 30px -15px rgba(38,186,164,0.5);
+    -webkit-box-shadow: 0px 15px 30px -15px rgba(38, 186, 164, 0.5);
+    box-shadow: 0px 15px 30px -15px rgba(38, 186, 164, 0.5);
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
 
 .ios:hover {
-    background-color: #5dccba;    
+    background-color: #5dccba;
 }
 
 .mac {
     background-color: #6173ff;
-    box-shadow: 0px 15px 35px -15px rgba(97,115,255,0.5);
+    -webkit-box-shadow: 0px 15px 35px -15px rgba(97, 115, 255, 0.5);
+    box-shadow: 0px 15px 35px -15px rgba(97, 115, 255, 0.5);
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
 
@@ -100,11 +117,11 @@ a {
     padding-bottom: 84px;
     text-align: center;
     background: url(../images/bg-header-desktop.png) no-repeat;
-    background-size: 100%;    
+    background-size: 100%;
 }
 
 .header__logo {
-    margin-bottom: 26px;    
+    margin-bottom: 26px;
 }
 
 .header__title {
@@ -117,7 +134,7 @@ a {
     max-width: 700px;
     margin: 0 auto;
     font-size: 20px;
-    line-height: 1.5;    
+    line-height: 1.5;
     word-spacing: 1px;
     color: #9fabb2;
 }
@@ -129,6 +146,8 @@ a {
 }
 
 .mac-picture__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1440px;
     margin: 0 auto;
@@ -175,7 +194,7 @@ a {
     margin-bottom: 98px;
 }
 
-.ios-picture__img {    
+.ios-picture__img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -190,9 +209,14 @@ a {
 }
 
 .tools-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: space-between;    
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .tools-box {
@@ -213,10 +237,10 @@ a {
     font-weight: 600;
 }
 
-.tools-box__item-text {    
+.tools-box__item-text {
     font-size: 16px;
-    line-height: 1.8; 
-    color: #9fabb2;   
+    line-height: 1.8;
+    color: #9fabb2;
 }
 
 .tools-box__item:before {
@@ -225,15 +249,15 @@ a {
     height: 40px;
     width: 50px;
     background-repeat: no-repeat;
-    background-position: center top;    
+    background-position: center top;
 }
 
-.tools-blacklists:before {    
+.tools-blacklists:before {
     background-image: url(../images/icon-blacklist.svg);
 }
 
 .tools-snippets:before {
-    background-image: url(../images/icon-text.svg);    
+    background-image: url(../images/icon-text.svg);
 }
 
 .tools-preview:before {
@@ -241,6 +265,8 @@ a {
 }
 
 .tools-logos {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     max-width: 1114px;
     margin: 18px auto;
@@ -258,17 +284,25 @@ a {
 /* footer */
 
 .footer {
-    background-color:#f5f6f8;
+    background-color: #f5f6f8;
 }
 
-.footer a:hover {    
-    filter: invert(62%) sepia(56%) saturate(535%) hue-rotate(121deg) brightness(90%) contrast(89%); /* color: #26bca4; */
+.footer a:hover {
+    -webkit-filter: invert(62%) sepia(56%) saturate(535%) hue-rotate(121deg) brightness(90%) contrast(89%);
+    filter: invert(62%) sepia(56%) saturate(535%) hue-rotate(121deg) brightness(90%) contrast(89%); /* color: #26bca4; */    
 }
 
 .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     height: 150px;
@@ -280,12 +314,20 @@ a {
     margin-bottom: 7px;
 }
 
-.menu {    
+.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
-	
+
     max-height: 90px;
     padding-left: 125px;
     padding-right: 240px;
@@ -294,14 +336,200 @@ a {
 .menu__item {
     min-width: 150px;
     padding: 10px;
-    padding-right: 20px;	
+    padding-right: 20px;
 }
 
 .social-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding-top: 4px;
 }
 
 .social-buttons__item:not(:last-child) {
     margin-right: 24px;
+}
+
+
+/* 
+------------------------------------------
+----------------- @media -----------------
+------------------------------------------
+*/
+
+
+/* medium desktops < 1200px */
+
+@media (max-width: 1200px) {
+
+    /* mac-picture */
+    .mac-picture__inner {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .mac-picture__img {
+        margin: 0;
+    }
+
+    .mac-picture__img img {
+        position: static;
+        max-width: 100%;
+    }
+
+    .mac-picture__info {
+        max-width: 450px;
+        padding-right: 0;
+    }
+
+    /* tools */
+
+    .tools-wrap {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .tools-box__item {
+        padding: 30px 10px;
+    }
+
+    .tools-logos {
+        padding-top: 60px;
+        padding-left: 0;
+    }
+
+    .tools-logos__item {
+        padding: 30px;
+    }
+
+}
+
+
+/* tablets < 768px */
+
+@media (max-width: 768px) {
+
+    /* footer */
+
+    .footer-wrap {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .menu {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        margin: 30px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .social-buttons__item:not(:last-child) {
+        margin-right: 44px;
+    }
+
+}
+
+
+/* phones < 576px */
+
+@media (max-width: 576px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+
+    /* sections */
+
+    .section-title {
+        margin-bottom: 18px;
+        font-size: 28px;
+    }
+
+    .section-text {
+        line-height: 1.6;
+    }
+
+    /* buttons */
+
+    .button {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .ios {
+        margin-bottom: 25px;
+    }
+
+    /* header */
+
+    .header {
+        background: url(../images/bg-header-mobile.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .header__title {
+        font-size: 32px;
+    }
+
+    .header__text {
+        font-size: 16px;
+    }
+
+    /* mac-picture */
+
+    .mac-picture__info {
+        padding-top: 36px;
+    }
+
+    .mac-picture__info-text {
+        margin-bottom: 46px;
+        line-height: 1.7;
+    }
+
+    /* ios-picture */
+
+    .ios-picture__text {
+        margin-bottom: 60px;
+    }
+
+    /* tools */
+
+    .tools {
+        padding-top: 80px;
+    }
+
+    .tools-box__item {
+        padding: 20px 0px;
+    }
+
+    /* footer */
+
+    .menu {
+        max-height: none;
+    }
+
+    .menu__item {
+        margin-bottom: 10px;
+        padding-right: 0;
+        font-size: 18px;
+    }
+
 }
