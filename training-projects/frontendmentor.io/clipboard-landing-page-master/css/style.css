@@ -74,6 +74,7 @@ a {
 
 .ios {
     background-color: #26baa4;
+    box-shadow: 0px 15px 30px -15px rgba(38,186,164,0.5);
     transition: background-color 0.3s;
 }
 
@@ -83,6 +84,7 @@ a {
 
 .mac {
     background-color: #6173ff;
+    box-shadow: 0px 15px 35px -15px rgba(97,115,255,0.5);
     transition: background-color 0.3s;
 }
 
